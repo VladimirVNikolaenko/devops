@@ -1,0 +1,30 @@
+#https://github.com/VladimirVNikolaenko/devops/blob/master/script.sh
+#https://github.com/VladimirVNikolaenko/devops/tree/master
+#
+.\script.sh
+#
+#
+#root@ubuntu-node-x:/tmp# cat Dockerfile
+#FROM nginx
+#RUN rm /var/log/nginx/*
+#WORKDIR /usr/share/nginx/html
+#COPY index/index.txt index.html
+#
+#root@ubuntu-node-x:/tmp#
+#
+#
+docker build -t vladimirvnikolaenko/devops:master .
+#
+docker push vladimirvnikolaenko/devops:master
+#
+#root@ubuntu-node-x:/tmp# cat docker-compose.yml
+#services:
+#  nginx:
+#    build: .
+#    container_name: ngx-c-1
+#    ports:
+#      - "8180:80"
+#    volumes:
+#      - ./log/nginx:/var/log/nginx
+#
+#root@ubuntu-node-x:/tmp#
